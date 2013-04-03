@@ -4,7 +4,7 @@
 
 <ul doc-tutorial-nav="5"></ul>
 
-ハードコーディングされた３つの携帯電話データセットだけでアプリケーションを作るのは終わりにしましょう！angular 組み込みの {@link api/ng services}、{@link api/ng.$http $http} を使ってより大きなデータセットを取得してみましょう。
+ハードコーディングされた３つの携帯電話データセットだけでアプリケーションを作るのは終わりにしましょう！ angular 組み込みの {@link api/ng services}、{@link api/ng.$http $http} を使ってより大きなデータセットを取得してみましょう。
 angular の {@link guide/di dependency-injection (DI)} を使って PhoneListCtrl コントローラーに $http サービスを提供します。
 
 <div doc-tutorial-reset="5"></div>
@@ -34,8 +34,8 @@ GitHub}で見ることができます：
 
 ## Controller
 
-WEBサーバ上にある app/phones/phones.json ファイルをHTTPリクエストでフェッチするために angular の {@link api/ng.$http $http}サービスを使います。$http は 数あるbuilt-in {@link api/ng angular services}のひとつで、Web アプリケーションにありがちなオペレーションを担当します。Angularはこのようなサービスを必要なときに注入してくれます。
-サービスは angularの {@link guide/di DI subsystem} から管理されています。
+WEBサーバ上にある app/phones/phones.json ファイルをHTTPリクエストでフェッチするために angular の {@link api/ng.$http $http}サービスを使います。$http は 数あるbuilt-in {@link api/ng angular services}のひとつで、Web アプリケーションにありがちなオペレーションを担当します。angular はこのようなサービスを必要なときに注入してくれます。
+サービスは angular の {@link guide/di DI subsystem} から管理されています。
 
 __`app/js/controllers.js:`__
 <pre>
@@ -50,10 +50,10 @@ function PhoneListCtrl($scope, $http) {
 //PhoneListCtrl.$inject = ['$scope', '$http'];
 </pre>
 
-$http がWEBサーバに対して HTTP GET request を行います。対象は phone/phones.jsonで(このURLはindex.htmlファイルからの相対パスとして解決されます)サーバはJSONファイルの内容を返します(そのレスポンスはバックエンドのサーバで動的生成されることもあるでしょう。動的生成であろうとファイルであろうと、ブラウザやアプリケーションからは同じに見えます。このチュートリアルでは話を単純にするためJSONファイルになっています)
+$http がWEBサーバに対して HTTP GET request を行います。対象は phone/phones.json で(このURLはindex.htmlファイルからの相対パスとして解決されます)サーバはJSONファイルの内容を返します(そのレスポンスはバックエンドのサーバで動的生成されることもあるでしょう。動的生成であろうとファイルであろうと、ブラウザやアプリケーションからは同じに見えます。このチュートリアルでは話を単純にするためJSONファイルになっています)
 
-$httpサービスはsuccessメソッドを持つ{@link api/ng.$q promise object}を返します。非同期のレスポンスを処理するために、このメソッドを呼び、phonesというモデルのかたちで、このコントローラーが扱うスコープにデータを設定します。
-お気づきでしょうがangularは検出されたJSONを自分でパースします！
+$http サービスは success メソッドを持つ{@link api/ng.$q promise object}を返します。非同期のレスポンスを処理するために、このメソッドを呼び、phones というモデルのかたちで、このコントローラーが扱うスコープにデータを設定します。
+お気づきでしょうが angular は検出されたJSONを自分でパースします！
 angular でサービスを使用するには、単純に依存するサービスの名前をコントローラーのコンストラクター関数への引数として宣言するだけで良いのです。次の例をみてください:
 
     function PhoneListCtrl($scope, $http) {...}
@@ -67,13 +67,13 @@ angular でサービスを使用するには、単純に依存するサービス
 
 ### '$' Prefix Naming Convention
 
-独自のサービスを作ることもできます。実際に Step 11 ではそれを行います。名前付けのルールとして、angular の組み込みサービス、スコープのメソッドとその他いくつかの angular API には名前の先頭に '$' が付きます。名前の衝突を避けるために、独自のサービスには先頭に '$' を付けないでください。名前の衝突を防ぐためにです。
+独自のサービスを作ることもできます。実際に Step 11 ではそれを行います。名前付けのルールとして、angular の組み込みサービス、スコープのメソッドとその他いくつかの angular API には名前の先頭に '$' が付きます。名前の衝突を避けるために、独自のサービスには先頭に '$' を付けないでください。
 
 
 ### A Note on Minification
 
 angular はコントローラーの依存性をコンストラクター引数の名前を使って解決するので、もし PhoneListCtrl の Javascript code を  {@link http://en.wikipedia.org/wiki/Minification_(programming)
-minify} してしまうと、全ての関数引数も minify されてしまうので、dependency injector がサービスを見つけることができなくなってしまいます。minification によって生じる問題を克服するには、上記コードスニペットの最終行にあるように（コメントアウトされています）、コントローラー関数の $inject プロパティーにサービスの名前を配列として割り当ててください:
+minify} してしまうと、全ての関数引数も minify されてしまうので、dependency injector がサービスを見つけることができなくなってしまいます。 minification によって生じる問題を克服するには、上記コードスニペットの最終行にあるように（コメントアウトされています）、コントローラー関数の $inject プロパティーにサービスの名前を配列として割り当ててください:
 
     PhoneListCtrl.$inject = ['$scope', '$http'];
 
@@ -114,11 +114,11 @@ describe('PhoneCat controllers', function() {
 
 * $rootScope.$new() を呼んで、コントローラーのための新しいスコープを生成します。
 
-* PhoneListCtrl 関数と先ほど作ったスコープをパラメーターとして、注入された $controller 関数を 呼びます。
+* `PhoneListCtrl` 関数と先ほど作ったスコープをパラメーターとして、注入された $controller 関数を 呼びます。
 
 * 現在のコードでは、コントローラー内で $http サービスを使用して電話リストを取得しているので、PhoneListCtrl の子スコープを作成する前に、テスト実行環境に対してコントローラーから来る http リクエストへの準備をしておくように伝えなければなりません。そのためには:
 
-*$httpBackend サービスを beforeEach 関数へ注入するようにリクエストします。これは本番環境で全ての XHR と JSONP リクエストを受け持つサービスのモックバージョンです。このモックのおかげで、ネイティブ API やそれに伴う global state （これらのおかげでテストは悪夢となりえます）を扱わずにテストを書くことができます。
+* $httpBackend サービスを beforeEach 関数へ注入するようにリクエストします。これは本番環境で全ての XHR と JSONP リクエストを受け持つサービスのモックバージョンです。このモックのおかげで、ネイティブ API やそれに伴う global state （これらのおかげでテストは悪夢となりえます）を扱わずにテストを書くことができます。
 
 * $httpBackend.expectGET メソッドを使用して、$httpBackend サービスに HTTP リクエストが来ることを教えておき、またどのように返答するかを指示します。$httpBackend.flush メソッドを呼んではじめてレスポンスが返ることに気をつけてください。
 
@@ -138,7 +138,7 @@ describe('PhoneCat controllers', function() {
 
 * 今度はスコープに phone モデルが存在することを確認するアサーションを書きます。
 
-最後に我々はorderPropの初期値が正しくセットされているか確認します
+最後に我々は`orderProp`の初期値が正しくセットされているか確認します
 
 <pre>
     it('should set the default value of orderProp model', function() {
