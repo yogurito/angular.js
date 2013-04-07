@@ -1,29 +1,30 @@
 @ngdoc overview
-@name スタートガイド
+@name はじめに
 @description
 
-私たちは、あなたにAngularJSを使いはじめる時に苦労しないで欲しいです。私たちは、あなたがAngularJSのエキスパートになるための、次のステップをまとめました。
+私たちは、あなたが楽に Angular を使いはじめられる事を願っています。あなたが Angular のエキスパートになっていく道のりに、次のようなステップをまとめておきました。
 
-1. {@link guide/concepts AngularJSの概要}を読みましょう。<br/>AngularJSの用語とAngularJSのコンポーネントがどのように連携して動作するかを理解してください。
-1. {@link tutorial/ AngularJSチュートリアル}を行いましょう。<br/>すべてのビルドと、node.jsのWebサーバ上でテストが完了したアプリケーションを片付けてください。すべてのメジャーなAngularJSの特徴とあなたの開発環境のセットアップ方法をカバーしています。
-1. {@link https://github.com/angular/angular-seed Seed App プロジェクトテンプレート}をダウンロードするか、git cloneしてください。<br/>アプリケーションを開発し始めるためのディレクトリレイアウト、テストハーネス、スクリプトが付いたスタートアプリケーションを提供します。
+1. {@link guide/concepts 概念的な概要}を読む。<br/>AngularJSの用語とAngularJSのコンポーネントがどのように連携して動作するかを理解してください。
+1. {@link tutorial/ AngularJSチュートリアル}を行う。<br/>node.jsのWebサーバの上で走るテストを備えたアプリケーションの開発を、最初から最後まで通じてやりましょう。AngularJSの主な特徴を全てカバーしており、あなたの開発環境をセットアップする方法も教えてくれます。
+1. {@link https://github.com/angular/angular-seed Seed App プロジェクトテンプレート}をダウンロード、クローンしてください。<br/>アプリケーションの開発を始めるためのディレクトリレイアウト、テストハーネス、スクリプトがついたスターターアプリが提供されます。
 
-#さらにもう一歩
+#さらなるステップ
 
 ##動画を見る
 
-もし、ホームページを見たことがなければ見てみてください:
-* {@link http://www.youtube.com/watch?v=WuiHuZq_cg4&list=PL173F1A311439C05D&context=C48ac877ADvjVQa1PpcFONnl4Q5x8hqvT6tRBTE-m0-Ym47jO3PEE%3D Introduction to AngularJS}
-* {@link http://www.youtube.com/watch?v=Yg-R1gchccg&list=PL173F1A311439C05D&context=C48ac877ADvjVQa1PpcFONnl4Q5x8hqvT6tRBTE-m0-Ym47jO3PEE%3D Creating Directives}
-* {@link http://www.youtube.com/watch?v=IRelx4-ISbs&list=PL173F1A311439C05D&context=C48ac877ADvjVQa1PpcFONnl4Q5x8hqvT6tRBTE-m0-Ym47jO3PEE%3D Communicating with Servers}
+もし、まだホームページにある動画を見たことがなければ見てみてください:
 
-また{@link http://www.youtube.com/user/angularjs YouTube channel}に、他にもAngularJSの動画プレゼンとチュートリアルがありますのでごらんください。
+* {@link http://www.youtube.com/watch?v=WuiHuZq_cg4&list=PL173F1A311439C05D&context=C48ac877ADvjVQa1PpcFONnl4Q5x8hqvT6tRBTE-m0-Ym47jO3PEE%3D AngularJSの紹介}
+* {@link http://www.youtube.com/watch?v=Yg-R1gchccg&list=PL173F1A311439C05D&context=C48ac877ADvjVQa1PpcFONnl4Q5x8hqvT6tRBTE-m0-Ym47jO3PEE%3D ディレクティブを作る}
+* {@link http://www.youtube.com/watch?v=IRelx4-ISbs&list=PL173F1A311439C05D&context=C48ac877ADvjVQa1PpcFONnl4Q5x8hqvT6tRBTE-m0-Ym47jO3PEE%3D サーバと通信する}
+
+また{@link http://www.youtube.com/user/angularjs YouTube チャンネル}には他にも AngularJS のビデオプレゼンやチュートリアルがありますのでごらんください。
 
 ##フォローする
 
-* {@link http://groups.google.com/forum/?fromgroups#!forum/angular メーリングリスト}を購読してください。質問はここに！
-* {@link https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fangularjs.org%2F&region=follow_link&screen_name=angularjs&source=followbutton&variant=2.0 @angularjs}をフォローしてください。
-* {@link https://plus.google.com/110323587230527980117/posts Google+アカウント}をサークルに追加してください。
+* {@link http://groups.google.com/forum/?fromgroups#!forum/angular メーリングリスト}を購読する。質問はここに！
+* {@link https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fangularjs.org%2F&region=follow_link&screen_name=angularjs&source=followbutton&variant=2.0 @angularjs}をフォローする。
+* {@link https://plus.google.com/110323587230527980117/posts Google+}のサークルに私たちを追加する。
 
 ##さらに読む
 
