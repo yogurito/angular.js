@@ -98,7 +98,7 @@ describe('PhoneCat App', function() {
 
 * node.jsユーザー：{@link http://localhost:8000/test/e2e/runner.html}
 * その他のhttpサーバーのユーザー：`http://localhost:[port-number]/[context-path]/test/e2e/runner.html`
-* 気ままな読者: {@link http://angular.github.com/angular-phonecat/step-3/test/e2e/runner.html}
+* このページを読んでいるだけの人: {@link http://angular.github.com/angular-phonecat/step-3/test/e2e/runner.html}
 
 先の章では単体テストを実行するためにTestacularをどう使うかを見ました。でもTestacularはエンドツーエンドのテストを走らせるのにも使えるんです！スクリプト`./scripts/e2e-test.sh`を使って下さい。エンドツーエンドのテストは遅いので、単体テストの時とは違ってTestacularはテストが終わると終了し、ファイルが変更されるたびに自動で再実行するようなことはありません。テストセットを再実行するには、`e2e-test.sh`スクリプトをもう一度実行して下さい。
 
